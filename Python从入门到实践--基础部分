@@ -1,0 +1,124 @@
+## 第一部分  基础知识
+
+    本书的第一部分介绍编写 Python 程序所需要熟悉的基本概念，其中很多都适用于所有编程语言，因此它们在你的整个程序员生涯中都很有用。
+* 第 1 章介绍在计算机中安装 Python，并运行第一个程序——它在屏幕上打印消息“Hello world!”。
+* 第 2 章论述如何在变量中存储信息以及如何使用文本和数字。
+* 第 3 章和第 4 章介绍列表。使用列表能够在一个变量中存储任意数量的信息，从而高效地处理数据 ：只需几行代码，你就能够处理数百、数千乃至数百万个值。
+* 第 5 章讲解使用 if 语句来编写这样的代码 ：在特定条件满足时采取一种措施，而在该条件不满足时采取另一种措施。
+* 第 6 章演示如何使用 Python 字典，将不同的信息关联起来。与列表一样，你也可以根据需要在字典中存储任意数量的信息。
+* 第 7 章讲解如何从用户那里获取输入，以让程序变成交互式的。你还将学习 while 循环，它不断地运行代码块，直到指定的条件不再满足为止。
+* 第 8 章介绍编写函数。函数是执行特定任务的被命名的代码块，你可以根据需要随时运行它。
+* 第 9 章介绍类， 它让你能够模拟实物，如小狗、小猫、人、汽车、火箭等，让你的代码能够表示任何真实或抽象的东西。
+* 第 10 章介绍如何使用文件，以及如何处理错误以免程序意外地崩溃。你需要在程序关闭前保存数据，并在程序再次运行时读取它们。你将学习 Python 异常，它们让你能够未雨绸缪，从而让程序妥善地处理错误。
+* 第 11 章为代码编写测试，以核实程序是否像你期望的那样工作。这样，扩展程序时，你就不用担心引入新的 bug。要想脱离初级程序员的阵容，跻身于中级程序员的行列，测试代码是你必须掌握的基本技能之一。
+
+###  第一章   起步
+    安装配置python，输出hello world。建议使用python3.python官网https://www.python.org/
+    
+### 第二章  变量和简单数据类型
+#### 2.1  变量的命名和使用
+*  变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头，例如，可将变量命名为message_1，但不能将其命名为1_message。
+*   变量名不能包含空格，但可使用下划线来分隔其中的单词。例如，变量名greeting_message可行，但变量名greeting message会引发错误。
+*  不要将Python关键字和函数名用作变量名。
+*  变量名应既简短又具有描述性。例如， name比n好， student_name比s_n好， name_length比length_of_persons_name好。
+*  慎用小写字母l和大写字母O，因为它们可能被人错看成数字1和0。
+#### 2.2  字符串方法
+* title()以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。
+* 要将字符串改为全部大写或全部小写。 upper()、lower()。
+* Python使用加号（ +）来合并字符串。
+* 使用\t或\n来添加空白。
+* 删除空白。lstrip()、rstrip()和strip()
+#### 2.3  数字
+> 整数 int   小数 float(没有单精度，双精度，不精确 保留几位小数，相对精确） bool  布尔型 True, False  复数 complex 1 + 2j
+* 整数  int型
+* 浮点数。Python将待小数点的数字都称为浮点数。
+* python3。 3 / 2 == 1.5 3 // 2 == 1
+* python2。 3 / 2 == 1
+* 输出时通过str()避免类型出错
+
+#### 2.4  Python之禅
+```
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+```
+### 第三章 列表简介
+#### 3.1 访问列表元素
+* [0]....[n-1]
+* [-1]....[-n]
+#### 3.2 添加列表元素
+* 在列表末尾添加元素 append(xxx)
+* 在列表中插入元素  insert(pos, xxx)
+* 两个列表相加
+* extend()
+#### 3.3 删除列表元素
+* del  list1[pos]
+* pop()
+* pop(pos)
+* 根据值去删除, remove(xxx)。 方法remove()只删除第一个指定的值。
+#### 3.4 修改列表元素
+直接赋值指定坐标的。
+#### 3.5 组织列表
+* sort()
+* sorted(list1,reverse=xx) 不改变列表
+* reverse()
+* len()
+### 第四章 操作列表
+#### 4.1 遍历整个列表
+* for cat in cats:   
+* for dog in dogs:  
+* for item in list_of_items:
+#### 4.2 创建数值列表
+* 使用range()函数。
+* list(range())。
+* 对数字列表进行简单的统计计算。min、max、sum
+#### 4.3 使用列表的一部分
+* 切片
+#### 4.4 元组
+>  一系列不可修改的元素
+* 一个元组只有一个元素，只能(xxx,)
+* tuple()
+
+#### 4.5 代码审核
+从本章编写的程序中选择三个，根据 PEP 8 指南对它们进行修改。
+* 每级缩进都使用四个空格。对你使用的文本编辑器进行设置，使其在你按 Tab键时都插入四个空格;
+* 每行都不要超过 80 字符。对你使用的编辑器进行设置，使其在第 80 个字符处显示一条垂直参考线。
+* 不要在程序文件中过多地使用空行。
+### 第五章 if语句
+* == 、!=
+* 使用and检查多个条件、使用or检查多个条件
+* in、not in 判断值是否在列表中
+### 第六章 字典
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
